@@ -1,0 +1,200 @@
+@@include('parts/head2.html')	
+	
+	<div class="s page-titl">
+		
+		@@include('parts/contacts-title.html')	
+	
+	</div> 
+	
+	<div class="kd-cont__map-wrapp">
+		<div class="kd-cont__map" id="kd_cont__map"></div>
+		
+		<!-- MODAL 1 -->
+		<div id="kd_cont__map_mod_1" class="kd-cont__map-mod">
+			<div class="kd-cont__map-close">
+				<i class="icon icon-cross-out"></i>
+			</div>
+			<div class="kd-cont__map-head" style="background: url('../img/kd-cont__map-head.jpg') center no-repeat; -webkit-background-size: cover;
+			background-size: cover;"></div>
+			<div class="kd-cont__map-content">
+				<div class="kd-cont__map-blck blck-1">
+					<div class="kd-cont__map-heading">
+						Центральный офис продаж
+					</div>
+					<div class="kd-cont__map-time">
+						<p>
+							пн—пт: 09:00—20:00 <br>
+							сб—вс: 10:00—18:00
+						</p>
+					</div>
+					<p>
+						Площадь Ильича/Авиамоторная <br>
+						Москва, ш. Энтузиастов, д. 7а
+					</p>
+					<p>
+						<a href="tel:+7 (495) 308-09-51">+7 (495) 308-09-51</a> <br>
+						<a href="mailto:okna@mosokna.ru">okna@mosokna.ru</a>
+					</p>
+				</div>
+				<div class="kd-cont__map-blck blck-2">
+					<div id="kd_cont__map_1" class="kd-cont__map-small"></div>
+				</div>
+			</div>
+		</div><!-- .kd-cont__map-mod -->
+		
+		
+		<!-- MODAL 2 -->
+		<div id="kd_cont__map_mod_2" class="kd-cont__map-mod">
+			<div class="kd-cont__map-close">
+				<i class="icon icon-cross-out"></i>
+			</div>
+			<div class="kd-cont__map-head" style="background: url('../img/Vladimir_15.jpg') center no-repeat; -webkit-background-size: cover;
+			background-size: cover;"></div>
+			<div class="kd-cont__map-content">
+				<div class="kd-cont__map-blck blck-1">
+					<div class="kd-cont__map-heading">
+						Головной офис продаж
+					</div>
+					<div class="kd-cont__map-time">
+						<p>
+							пн—пт: 08:00—22:00 <br>
+							сб—вс: 11:00—17:00
+						</p>
+					</div>
+					<p>
+						Тракторная ул., 45, <br> 
+						Владимир, Владимирская обл.
+					</p>
+					<p>
+						<a href="tel:+7 (495) 308-09-51">+7 (495) 308-09-51</a> <br>
+						<a href="mailto:vladimir@mosokna.ru">vladimir@mosokna.ru</a>
+					</p>
+				</div>
+				<div class="kd-cont__map-blck blck-2">
+					<div id="kd_cont__map_2" class="kd-cont__map-small"></div>
+				</div>
+			</div>
+		</div><!-- .kd-cont__map-mod -->
+
+
+		<!-- MODAL 3 -->
+		<div id="kd_cont__map_mod_3" class="kd-cont__map-mod">
+			<div class="kd-cont__map-close">
+				<i class="icon icon-cross-out"></i>
+			</div>
+			<div class="kd-cont__map-head" style="background: url('../img/105336_1.jpg') center no-repeat; -webkit-background-size: cover;
+			background-size: cover;"></div>
+			<div class="kd-cont__map-content">
+				<div class="kd-cont__map-blck blck-1">
+					<div class="kd-cont__map-heading">
+						Филиал офиса продаж
+					</div>
+					<div class="kd-cont__map-time">
+						<p>
+							пн—пт: 10:00—22:00 <br>
+							сб—вс: 10:00—18:00
+						</p>
+					</div>
+					<p>
+						Февральская ул., 57, <br>
+						Подольск, Московская обл.
+					</p>
+					<p>
+						<a href="tel:+7 (495) 308-09-51">+7 (295) 308-09-51</a> <br>
+						<a href="mailto:podolsk@mosokna.ru">podolsk@mosokna.ru</a>
+					</p>
+				</div>
+				<div class="kd-cont__map-blck blck-2">
+					<div id="kd_cont__map_3" class="kd-cont__map-small"></div>
+				</div>
+			</div>
+		</div><!-- .kd-cont__map-mod -->
+
+
+
+	</div>
+
+	
+	@@include('parts/requsites.html')
+
+
+@@include('parts/footer.html')
+
+
+
+
+<script>
+	//GOOGLE MAP
+	(function () {
+
+	  if( $('#kd_cont__map').length ){
+			
+			var longLatt = [
+				{
+					lat: 55.758133,
+					lng: 37.626755
+				},
+				{
+					lat: 56.149577,
+					lng: 40.386430 
+				},
+				{
+					lat: 55.431797,
+					lng: 37.548573 
+				}
+			]
+
+			var kdCounter = 0;
+			var marker = [];
+		
+			// Create the Main map
+		  var map = new google.maps.Map($('#kd_cont__map')[0], {
+		    zoom: 7,
+		    center: new google.maps.LatLng( longLatt[0].lat, longLatt[0].lng ), 
+		  });
+
+			longLatt.forEach(function(data) {
+				marker.push( new google.maps.Marker({
+			    map: map,
+			    position: new google.maps.LatLng( data.lat, data.lng ),
+			    icon: 'img/marker-cust.png',
+			    kdItt: kdCounter,
+			    kdLongLat: data
+			  }) );
+			  kdCounter++;
+			});
+
+
+			marker.forEach(function(currMarker) {
+				
+				google.maps.event.addListener( currMarker, 'click', function() {
+			  		
+					var kdIncreased = currMarker.kdItt + 1
+
+				  $('#kd_cont__map_mod_' + kdIncreased ).css('display','block');
+
+				  var map_1 = new google.maps.Map($('#kd_cont__map_' + kdIncreased )[0], {
+				    zoom: 17,
+				    center: new google.maps.LatLng( currMarker.kdLongLat.lat, currMarker.kdLongLat.lng ), 
+				  });
+
+				  var marker1_1 = new google.maps.Marker({
+				    map: map_1,
+				    position: new google.maps.LatLng( currMarker.kdLongLat.lat, currMarker.kdLongLat.lng ),
+				    icon: 'img/marker-cust.png',
+				  });
+
+				});
+						
+			});
+		}  
+		
+		//CLOSE MAP
+		$('body').on('click','.kd-cont__map-close', function(e){
+			e.preventDefault();
+			$('.kd-cont__map-mod').css('display','none');
+		});
+		
+
+	})();
+</script>		

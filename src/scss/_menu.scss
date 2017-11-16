@@ -1,0 +1,36 @@
+.head{
+	&__menu{
+		list-style-type: none;
+		font-size: 16px;
+		&-2{
+			font-size: 14px;
+		}
+		li{
+			display: inline-block;
+			margin: 10px 20px 10px 0;
+		}
+	}
+}
+
+.side{
+	&__menu{
+		list-style-type: none;
+		li{
+			margin-bottom: 7px;
+			padding-left: 40px;
+			position: relative;
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 7px;
+				width: 7px;
+				height: 7px;
+				display: block;
+				background-color: $c-red;
+				border-radius: 50px;
+
+			}
+		}
+	}
+}

@@ -1,0 +1,221 @@
+@@include('parts/head2.html')	
+	
+	
+	
+	<div class="s page-titl">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="content">
+						<div class="sect-title">
+							Калькулятор стоимости цены
+						</div>
+						<div class="txt-cent">
+							<p>
+								<!-- <a href="#">Вся Россия</a> -->
+								По размеру и типу дома								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<form class="col-md-12 calc__form kd89-form" id="calc__form">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="calc__blck-1 blck">
+								<input type="radio" class="kd_calc_rad1" id="r1" name="kd_calc_rad1" value="okno1" data-width="1700" data-height="1700" data-price="10000" data-montaj="2000" data-otdelka="1000" checked>
+								<label for="r1"><img src="img/calc1.jpg" alt=""></label>
+
+								<input type="radio" class="kd_calc_rad1" id="r2" name="kd_calc_rad1" value="okno2" data-width="1800" data-height="1900" data-price="11000" data-montaj="2500" data-otdelka="1200">
+								<label for="r2"><img src="img/calc1.jpg" alt=""></label>
+								
+								<input type="radio" class="kd_calc_rad1" id="r3" name="kd_calc_rad1" value="okno3" data-width="1900" data-height="2000" data-price="12000" data-montaj="3000" data-otdelka="1400">
+								<label for="r3"><img src="img/calc1.jpg" alt=""></label>
+								
+								<input type="radio" class="kd_calc_rad1" id="r4" name="kd_calc_rad1" value="okno4" data-width="2000" data-height="2300" data-price="13000" data-montaj="3500" data-otdelka="1600">
+								<label for="r4"><img src="img/calc1.jpg" alt=""></label>
+								
+								<input type="radio" class="kd_calc_rad1" id="r5" name="kd_calc_rad1" value="okno5" data-width="2200" data-height="2500" data-price="14000" data-montaj="3600" data-otdelka="1800">
+								<label for="r5"><img src="img/calc1.jpg" alt=""></label>	
+							</div>
+							
+						</div><!-- .col-md-2 -->
+						<div class="col-md-4">
+							<div class="calc__blck-2 blck">
+								<div class="calc__main-img">
+									<img src="img/calc2.jpg" alt="">
+								</div>
+								<div class="calc__main-height">
+									<div class="calc__main-quant"><span>1700</span> мм</div>
+								</div>
+								<div class="calc__main-width">
+									<div class="calc__main-quant"><span>1700</span> мм</div>
+								</div>
+							</div>
+						</div><!-- .col-md-4 -->
+						
+						<div class="col-md-6">
+							<div class="calc__blck-3 blck">
+								<label for="s1">Система окон:</label>
+								<select name="kd_calc_sel1" id="s1" class="kd_calc_sel1">
+									<option value="">Название по умолчанию</option>
+									<option value="system1">Система окон 1</option>
+								  <option value="system2">Система окон 2</option>
+								  <option value="system3">Система окон 3</option>
+								  <option value="system4">Система окон 4</option>
+								</select>
+
+								<label for="s2">Подоконник:</label>
+								<select name="kd_calc_sel2" id="s2" class="kd_calc_sel1">
+									<option value="">Название по умолчанию</option>
+									<option value="podokonik1">Подоконник 1</option>
+								  <option value="podokonik2">Подоконник 2</option>
+								  <option value="podokonik3">Подоконник 3</option>
+								  <option value="podokonik4">Подоконник 4</option>
+								</select>
+
+								<label for="s3">Отлив:</label>
+								<select name="kd_calc_sel3" id="s3" class="kd_calc_sel1">
+									<option value="">Название по умолчанию</option>
+									<option value="otliv1">Отлив 1</option>
+								  <option value="otliv2">Отлив 2</option>
+								  <option value="otliv3">Отлив 3</option>
+								  <option value="otliv4">Отлив 4</option>
+								</select>
+
+								<label for="s4">Ламинация:</label>
+								<select name="kd_calc_sel4" id="s4" class="kd_calc_sel1">
+									<option value="">Название по умолчанию</option>
+									<option value="laminaciya1">Ламинация 1</option>
+								  <option value="laminaciya2">Ламинация 2</option>
+								  <option value="laminaciya3">Ламинация 3</option>
+								  <option value="laminaciya4">Ламинация 4</option>
+								</select>
+							</div>
+						</div><!-- .col-md-6 -->
+						
+						<div class="col-md-10">
+							<div class="calc__blck-4 blck">
+								<div class="tbl calc__blck-4-tbl clearfix">
+									<div class="tbl-cell mdl cell-1">
+										<div class="label">
+											Цена выбранного окна:
+										</div>
+										<div class="sect-1">
+											<p class="c-blu3">
+												<span id="kd_numb_sum">12051</span> Р											
+											</p>
+										</div>
+										<div class="sect-2">
+											<p class="c-blu2">
+												Монтаж: <span class="c-red"> <span id="kd_numb_mont">2070</span> Р</span>
+											</p>
+											<p class="c-blu2">
+												Отделка: <span class="c-red"> <span id="kd_numb_otdel" class="c-red">2798</span> Р</span>
+											</p>
+										</div>
+									</div>
+									<div class="tbl-cell mdl cell-2">
+										<div class="label">
+											Рассрочка
+										</div>
+										
+										<div class="sect-1">
+											<span id="kd_numb_rassr">1401</span> Р
+										</div>
+										<div class="sect-2">
+											<p>
+												в месяц
+											</p>
+										</div>
+
+									</div>
+									<div class="tbl-cell mdl cell-3">
+										<div class="label">
+											Акция
+										</div>
+										
+										<div class="akciya">
+											<span>
+												<span id="kd_numb_akcii">47</span> %												
+											</span>
+											скидка								
+										</div>
+
+									</div>
+									<div class="tbl-cell mdl cell-4">
+										<button type="submit" class="butt butt-red">Заказать</button>
+									</div>
+								</div>
+							</div>
+						</div><!-- .col-md-12 -->
+					</div><!-- .row -->	
+				</form>
+
+				<div class="col-md-10 col-md-offset-2">
+					<div class="calc__blck-5 blck content txt-cent c-blu2">
+						<p>
+							Важно: калькулятор показывает ориентировочные цены на пластиковые окна по заданному размеру. <br>
+							Расчет стоимости на нестандартные окна можно получить по телефону	
+						</p>
+					</div>
+				</div>
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+	</div>
+
+
+	<div class="promo s promo-2" style="background-color: #122F42;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="promo__inn">
+							<div class="promo__head">
+								Заказ окон — очень простой и понятный процесс
+							</div>
+							<div class="preim__list">
+								<div class="jumbo__it">
+									<img src="img/rectangle3.png" alt="">
+									<p>
+										НАЗВАНИЕ ПУНКТА
+									</p>
+								</div>
+								<div class="jumbo__it">
+									<img src="img/rectangle3.png" alt="">
+									<p>
+										НАЗВАНИЕ ПУНКТА
+									</p>
+								</div>
+								<div class="jumbo__it">
+									<img src="img/rectangle3.png" alt="">
+									<p>
+										НАЗВАНИЕ ПУНКТА
+									</p>
+								</div>
+								<div class="jumbo__it">
+									<img src="img/rectangle3.png" alt="">
+									<p>
+										НАЗВАНИЕ ПУНКТА
+									</p>
+								</div>
+								<div class="jumbo__it">
+									<img src="img/rectangle3.png" alt="">
+									<p>
+										НАЗВАНИЕ ПУНКТА
+									</p>
+								</div>
+							</div><!-- .preim__list -->
+							<button class="to-mod butt butt-red">Оставить заявку</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .promo -->
+
+	
+@@include('parts/footer.html')		

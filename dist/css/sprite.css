@@ -1,0 +1,126 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arr-next-h {
+  background-image: url(../img/sprite.png);
+  background-position: -33px -91px;
+  width: 11px;
+  height: 17px;
+}
+.icon-arr-next {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -91px;
+  width: 11px;
+  height: 17px;
+}
+.icon-arr-prev-h {
+  background-image: url(../img/sprite.png);
+  background-position: -22px -91px;
+  width: 11px;
+  height: 17px;
+}
+.icon-arr-prev {
+  background-image: url(../img/sprite.png);
+  background-position: -11px -91px;
+  width: 11px;
+  height: 17px;
+}
+.icon-arrow-dwn {
+  background-image: url(../img/sprite.png);
+  background-position: -44px -71px;
+  width: 14px;
+  height: 14px;
+}
+.icon-cross-out {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -39px;
+  width: 32px;
+  height: 32px;
+}
+.icon-footer-fb-act {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -71px;
+  width: 11px;
+  height: 20px;
+}
+.icon-footer-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -11px -71px;
+  width: 11px;
+  height: 20px;
+}
+.icon-footer-t-act {
+  background-image: url(../img/sprite.png);
+  background-position: -33px -71px;
+  width: 11px;
+  height: 19px;
+}
+.icon-footer-t {
+  background-image: url(../img/sprite.png);
+  background-position: -22px -71px;
+  width: 11px;
+  height: 19px;
+}
+.icon-footer-tel-act {
+  background-image: url(../img/sprite.png);
+  background-position: -52px -39px;
+  width: 20px;
+  height: 21px;
+}
+.icon-footer-tel {
+  background-image: url(../img/sprite.png);
+  background-position: -32px -39px;
+  width: 20px;
+  height: 21px;
+}
+.icon-footer-vk-act {
+  background-image: url(../img/sprite.png);
+  background-position: -94px -39px;
+  width: 22px;
+  height: 13px;
+}
+.icon-footer-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -72px -39px;
+  width: 22px;
+  height: 13px;
+}
+.icon-master-card {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 64px;
+  height: 39px;
+}
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: -58px -71px;
+  width: 14px;
+  height: 14px;
+}
+.icon-search2 {
+  background-image: url(../img/sprite.png);
+  background-position: -72px -71px;
+  width: 14px;
+  height: 14px;
+}
+.icon-visa {
+  background-image: url(../img/sprite.png);
+  background-position: -64px 0px;
+  width: 61px;
+  height: 39px;
+}
