@@ -30,6 +30,73 @@ $(document).ready(function(){
 	});
 
 
+	//SPINNER
+	(function () {
+		
+		//Stop people from typing
+		$('.kd89-num__spinner').keydown(function(e){
+		    e.preventDefault();
+		    return false;
+		});
+		var minNumber = 1;
+		var maxNumber = 100;
+		$('.kd89-num__wrap .increase').on('click', function() {
+		    if($('.kd89-num__spinner').val() == maxNumber){
+		        return false;
+		    }else{
+		        $('.kd89-num__spinner').val( parseInt($('.kd89-num__spinner').val(), 10) + 1);
+		    }
+		});
+
+		$('.kd89-num__wrap  .decrease').on('click', function() {
+		    if($('.kd89-num__spinner').val() == minNumber){
+		        return false;
+		    }else{
+		        $('.kd89-num__spinner').val( parseInt($('.kd89-num__spinner').val(), 10) - 1);
+		    }
+		});	
+
+	})(); 
+
+
+	
+
+	
+	$('.elem-10__slidd').slick({
+	  infinite: true,
+	  slidesToShow: 5,
+	  slidesToScroll: 1,
+	  prevArrow: '.elem-10__prev-1',
+	  nextArrow: '.elem-10__next-1',
+	  responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+	});
+
+	$('.elem-10__slidd-2').slick({
+	  infinite: true,
+	  slidesToShow: 5,
+	  slidesToScroll: 1,
+	  prevArrow: '.elem-10__prev-2',
+	  nextArrow: '.elem-10__next-2',
+	  responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+	});
+
+
+
+
 
 	$('.sliddr__control').hover(function(){
 		$(this).children('.icon').toggleClass('active');		

@@ -14,16 +14,29 @@
 			float: left;
 		}
 	}
+	.elem-5__it{
+		flex-basis: 33.33%;
+	}
 
 	.jumbo{
 		&__blck{
 			flex-basis: 100%;
+			&.blck-1{
+				order: 1;
+			}
+			&.blck-2{
+				order: 2;
+			}
+
 		}
 		&__inn{
 			&.inn-2{
 				max-width: none;
 				padding: 15px;
 			}	
+		}
+		&__inn{
+			float: none;
 		}
 	}
 	.line__butt{
@@ -41,6 +54,32 @@
 }
 
 @media (max-width: 992px){
+	.elem-6{
+		font-size: 14px;
+		.tbl{
+			display: block;
+		}
+		.tbl-cell{
+			display: block;
+			padding: 0;
+			font-size: 14px;
+		}
+		.cell-1{
+			font-size: 18px;
+		}
+		&__blck-1{
+			border-radius: 0;
+		}
+		&__wrap{
+			padding: 0;
+		}
+	}
+	.elem-7__img{
+		display: none;
+	}
+	.elem-8{
+		background-size: cover;
+	}
 	.mob-hamb{
 		display: block;
 	}
@@ -194,6 +233,9 @@
 }
 
 @media (max-width: 768px){
+	.elem-5__it{
+		flex-basis: 50%;
+	}
 	.top{
 		.top__blck-1{
 			padding: 10px 0;
@@ -265,7 +307,9 @@
 }
 
 @media (max-width: 550px){
-
+	.elem-5__it{
+		flex-basis: 100%;
+	}
 	.calc__blck-4{
 		.sect-1{
 			width: 100%;
@@ -277,6 +321,9 @@
 
 	.jumbo__range{
 		display: none;
+		&-vert{
+			display: none;
+		}
 	}
 	.footer__menu{
 		width: 50%;
@@ -287,6 +334,19 @@
 			margin: 0 auto 20px;
 		}
 	}
+	.elem-9{
+		&__line{
+			display: block;
+			&:nth-child(odd) .elem-9__it-1 {
+		    border-right: none;
+			}
+		}
+		&__it-1{
+			border-right: none;
+		}
+	}
+
+
 }
 
 @media (max-width: 480px){
