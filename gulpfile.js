@@ -102,7 +102,7 @@ gulp.task('html', function () {
 gulp.task('connect', function () {
   connect.server({
     root: 'dist/',
-    port: 8000,
+    port: 9000,
     livereload: true
   });
 });
