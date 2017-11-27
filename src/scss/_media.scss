@@ -233,6 +233,16 @@
 }
 
 @media (max-width: 768px){
+	.your-city__cont.d-i-b{
+		width: 100%;
+		.choose-city__menu ul{
+			width: 100%;
+			float: none;
+		}
+	}
+	.choose-city__menu{
+		width: 100%;
+	}
 	.elem-5__it{
 		flex-basis: 50%;
 	}

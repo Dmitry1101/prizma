@@ -18,31 +18,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arr-next-h {
   background-image: url(../img/sprite.png);
-  background-position: -33px -91px;
+  background-position: -33px -104px;
   width: 11px;
   height: 17px;
 }
 .icon-arr-next {
   background-image: url(../img/sprite.png);
-  background-position: 0px -91px;
+  background-position: 0px -104px;
   width: 11px;
   height: 17px;
 }
 .icon-arr-prev-h {
   background-image: url(../img/sprite.png);
-  background-position: -22px -91px;
+  background-position: -22px -104px;
   width: 11px;
   height: 17px;
 }
 .icon-arr-prev {
   background-image: url(../img/sprite.png);
-  background-position: -11px -91px;
+  background-position: -11px -104px;
   width: 11px;
   height: 17px;
 }
 .icon-arrow-dwn {
   background-image: url(../img/sprite.png);
-  background-position: -44px -71px;
+  background-position: -44px -84px;
   width: 14px;
   height: 14px;
 }
@@ -54,49 +54,49 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-footer-fb-act {
   background-image: url(../img/sprite.png);
-  background-position: 0px -71px;
+  background-position: 0px -84px;
   width: 11px;
   height: 20px;
 }
 .icon-footer-fb {
   background-image: url(../img/sprite.png);
-  background-position: -11px -71px;
+  background-position: -11px -84px;
   width: 11px;
   height: 20px;
 }
 .icon-footer-t-act {
   background-image: url(../img/sprite.png);
-  background-position: -33px -71px;
+  background-position: -22px -84px;
   width: 11px;
   height: 19px;
 }
 .icon-footer-t {
   background-image: url(../img/sprite.png);
-  background-position: -22px -71px;
+  background-position: -33px -84px;
   width: 11px;
   height: 19px;
 }
 .icon-footer-tel-act {
   background-image: url(../img/sprite.png);
-  background-position: -52px -39px;
+  background-position: -56px -39px;
   width: 20px;
   height: 21px;
 }
 .icon-footer-tel {
   background-image: url(../img/sprite.png);
-  background-position: -32px -39px;
+  background-position: -76px -39px;
   width: 20px;
   height: 21px;
 }
 .icon-footer-vk-act {
   background-image: url(../img/sprite.png);
-  background-position: -94px -39px;
+  background-position: 0px -71px;
   width: 22px;
   height: 13px;
 }
 .icon-footer-vk {
   background-image: url(../img/sprite.png);
-  background-position: -72px -39px;
+  background-position: -96px -39px;
   width: 22px;
   height: 13px;
 }
@@ -106,15 +106,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 64px;
   height: 39px;
 }
+.icon-phone-call {
+  background-image: url(../img/sprite.png);
+  background-position: -32px -39px;
+  width: 24px;
+  height: 24px;
+}
 .icon-search {
   background-image: url(../img/sprite.png);
-  background-position: -58px -71px;
+  background-position: -58px -84px;
   width: 14px;
   height: 14px;
 }
 .icon-search2 {
   background-image: url(../img/sprite.png);
-  background-position: -72px -71px;
+  background-position: -72px -84px;
   width: 14px;
   height: 14px;
 }

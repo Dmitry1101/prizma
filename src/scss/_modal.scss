@@ -3,7 +3,7 @@
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
-	padding: 40px 0; /* Location of the box */ 
+	padding: 70px 0; /* Location of the box */ 
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -51,9 +51,9 @@
 }
 
 .modal-header {
-	padding: 2px 16px;
-	background: linear-gradient(to right, rgba(224,108,160,1) 0%, rgba(236,79,100,1) 100%);
-	color: white;
+	// padding: 2px 16px;
+	// background: linear-gradient(to right, rgba(224,108,160,1) 0%, rgba(236,79,100,1) 100%);
+	// color: white;
 }
 
 .modal-body {padding: 15px 15px;}
