@@ -1081,6 +1081,10 @@ body{
 }
 
 .elem-1{
+	&__img{
+		display: none;
+		animation: appear 1s;
+	}
 	&__menu{
 		list-style-type: none;
 		margin: 100px 0;
@@ -1500,15 +1504,29 @@ body{
 	max-width: 500px;
 	.form-inp{
 		margin-bottom: 10px;
-		color: $c-bck;
+		color: #000000;
+		
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: #cccccc;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: #cccccc;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: #cccccc;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: #cccccc;
+		}
+
 	}
 	label{
 		color: $c-wh;
 	}
 	.blurred{
-		background: rgba( $c-blu2, 0.7 );
-		-webkit-filter: blur(5px); /* Safari */
-	  filter: blur(5px);
+		background: $c-blu1;
+		// -webkit-filter: blur(5px); /* Safari */
+	  // filter: blur(5px);
 	  position: absolute;
 	  top: 0;
 	  left: 0;
@@ -1557,21 +1575,48 @@ body{
 	z-index: 9;
 }
 
+.new__slider{
+	&-wrapp{
+		position: relative;	
+	}
+	&-control{
+		position: absolute;	
+		bottom: 0;	
+		z-index: 9;	
+		right: 20%;	
+		width: 100px;	
+		padding: 20px 10px;	
+		.sliddr__prev{
+			float: left;
+			padding: 5px 10px;
+			background-color: $c-blu2;
+		}
+		.sliddr__next{
+			float: right;
+			padding: 5px 10px;
+			background-color: $c-blu2;	
+		}
+
+		.sliddr__control{
+			position: static;	
+		}	
+	}
+}
 
 
 
-// .cusst{
-// 	&__modal{
-// 		&-content{
-// 			background: rgba( $c-blu1, 0.85 );
-// 		}
-// 	}
-// 	&__title{
 
-// 	}
-// }
+a.acctiiff{
+	color: 	red;
+}
 
-
-
+@keyframes appear {
+   0% {
+		opacity: 	0;
+   }
+   100% {
+		opacity: 1;
+   }
+}
 
 @import "media";

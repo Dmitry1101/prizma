@@ -54,6 +54,9 @@
 }
 
 @media (max-width: 992px){
+	.side__menu{
+		margin-bottom: 40px;	
+	}
 	.elem-6{
 		font-size: 14px;
 		.tbl{
@@ -233,6 +236,23 @@
 }
 
 @media (max-width: 768px){
+	.letters{
+		margin:	0;
+		&__foot{
+			color: 	$c-blu1;
+		}
+		&__blck{
+			margin: 0px 0 30px;	
+		}	
+	}
+
+	
+
+	label{
+		padding-right: 0;	
+		padding-left: 0;	
+	}	
+
 	.your-city__cont.d-i-b{
 		width: 100%;
 		.choose-city__menu ul{
@@ -287,6 +307,16 @@
 }
 
 @media (max-width: 749px){
+	.tab-butt{
+		margin-right: 0;	
+	}
+	.serv__blck{
+		text-align: center;	
+	}
+	.jumbo__it{
+		display: block;	
+		text-align: center;	
+	}
 	.kd-cont__map-head{
 		display: none;
 	}

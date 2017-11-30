@@ -164,12 +164,12 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
-}
+// input[type="search"] {
+//   -webkit-appearance: textfield;
+//   -webkit-box-sizing: content-box;
+//      -moz-box-sizing: content-box;
+//           box-sizing: content-box;
+// }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;

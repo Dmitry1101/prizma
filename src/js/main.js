@@ -4,8 +4,29 @@ function showTabBlock( target ){
 	});
 }
 
+function showActiveImg( target ){
+	$(target).fadeIn(200);
+}
+
 $(document).ready(function(){
 	
+
+	$('body').on('click','.elem-1__menu a', function(e){
+		e.preventDefault();
+		var objj = {};
+		objj.curr = $(this);
+		if( objj.curr.hasClass('acctiiff') ){
+			return false;	
+		}
+		else{
+			$('.elem-1__menu a.acctiiff').removeClass('acctiiff');
+			objj.curr.addClass('acctiiff');
+			$('.elem-1__img').css('display', 'none');
+			$(objj.curr.attr('href')).css('display', 'block');		
+		}
+	});	
+
+
 	//CLICKING TABS
 	$('body').on('click','.tab-butt', function(e){
 		e.preventDefault();
@@ -17,17 +38,19 @@ $(document).ready(function(){
 		else{
 			$('.tab-butt.akktiff').removeClass('akktiff');
 			objj.curr.addClass('akktiff');
-			
-
 			$('.tab-block.active').removeClass('active');
-
-			// $(this).removeClass('active');
-
 			$( objj.curr.attr('data-target') ).addClass( 'active' );
-
-			
 		}
 	});
+
+
+
+	$('body').on('click','.custt__modal', function(e){
+		if( $(e.target).hasClass('custt__modal') ){
+			$(this).css('display', 'none');
+			$('body').removeClass('ov-hidd');
+		}
+	});	
 
 
 	//SPINNER
@@ -63,10 +86,12 @@ $(document).ready(function(){
 	  infinite: true,
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
-	  arrows: false,
+	  // arrows: false,
 	  autoplay: true,
 	  autoplaySpeed: 1500,
 	  speed: 1300,
+	  prevArrow: '.new__slider-prev',
+	  nextArrow: '.new__slider-next',
 	});
 
 	
@@ -149,7 +174,7 @@ $(document).ready(function(){
 });
 
 
-
+		//MPDAL
 	$('body').on('click','.to-mod', function(e){
 		e.preventDefault();
 		var obj = {
@@ -188,6 +213,9 @@ $(window).on('load',function(){
 	
 	var aktiffButt = $('.tab-butt.akktiff').attr('data-target');
 	showTabBlock( aktiffButt );
+
+	var acctiiffImg = $('.elem-1__menu .acctiiff').attr('href');
+	showActiveImg( acctiiffImg );	
 
 });
 
