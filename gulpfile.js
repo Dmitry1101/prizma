@@ -50,8 +50,8 @@ gulp.task('sass', function () {
   gulp.src('src/scss/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}))
-    //.pipe(sass({outputStyle: 'compact'}))
+    //.pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'compact'}))
     
     .pipe(autoprefixer({
       browsers: ['last 7 versions'], 
@@ -74,7 +74,7 @@ gulp.task('js', function () {
       "main.js"
     ]))
     .pipe(concat('all.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('dist/js/'))
     .pipe(connect.reload());
 });
@@ -91,7 +91,7 @@ gulp.task('html', function () {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(minifyHTML(opts))
+   // .pipe(minifyHTML(opts))
     .pipe(gulp.dest('dist/'))
     .pipe(connect.reload());
     //.pipe(notify('Done!'));

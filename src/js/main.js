@@ -1,14 +1,166 @@
-function showTabBlock( target ){
-	$(target).fadeIn(200, function(){
-		$(this).addClass('active');
-	});
-}
-
-function showActiveImg( target ){
-	$(target).fadeIn(200);
-}
-
 $(document).ready(function(){
+
+	
+
+	//PRODUCTION SLIDER
+	$('#sliddr1_1').slick({
+	  infinite: false,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  prevArrow: '#sliddr__wrapp_1 .sliddr__prev',
+	  nextArrow: '#sliddr__wrapp_1 .sliddr__next',
+	  asNavFor: '#sliddr1_2',
+	 
+	}).slick('setPosition');
+	
+	// firsst.slick('slickNext');
+
+	$('#sliddr1_2').slick({
+	  infinite: false,
+	  slidesToShow: 6,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  asNavFor: '#sliddr1_1',
+	  focusOnSelect: true,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    
+	  ]
+	}).slick('setPosition');
+	
+	$('#sliddr1_2').slick('setPosition');
+
+	$('#sliddr2_1').slick({
+	  infinite: false,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  prevArrow: '#sliddr__wrapp_2 .sliddr__prev',
+	  nextArrow: '#sliddr__wrapp_2 .sliddr__next',
+	  asNavFor: '#sliddr2_2',
+	 
+	});
+
+	$('#sliddr2_2').slick({
+	  infinite: false,
+	  slidesToShow: 6,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  asNavFor: '#sliddr2_1',
+	  focusOnSelect: true,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    
+	  ]
+	});
+
+
+	$('#sliddr3_1').slick({
+	  infinite: false,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  prevArrow: '#sliddr__wrapp_3 .sliddr__prev',
+	  nextArrow: '#sliddr__wrapp_3 .sliddr__next',
+	  asNavFor: '#sliddr3_2',
+	 
+	});
+
+	$('#sliddr3_2').slick({
+	  infinite: false,
+	  slidesToShow: 6,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  asNavFor: '#sliddr3_1',
+	  focusOnSelect: true,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    
+	  ]
+	});
+
+
+	$('#sliddr4_1').slick({
+	  infinite: false,
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  prevArrow: '#sliddr__wrapp_4 .sliddr__prev',
+	  nextArrow: '#sliddr__wrapp_4 .sliddr__next',
+	  asNavFor: '#sliddr4_2',
+	 
+	});
+
+	$('#sliddr4_2').slick({
+	  infinite: false,
+	  slidesToShow: 6,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  asNavFor: '#sliddr4_1',
+	  focusOnSelect: true,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    
+	  ]
+	});
+
+
+	$('#sliddr__reviewz').slick({
+	  infinite: false,
+	  slidesToShow: 2,
+	  slidesToScroll: 1,
+	  dots: true,
+	  prevArrow: '#sliddr__wrapp_reviewz .sliddr__prev',
+	  nextArrow: '#sliddr__wrapp_reviewz .sliddr__next',
+	  appendDots: '.sliddr__dots',
+	   responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    
+	  ]
+	});
+
+
+
+
+
+	
+
+
+	function showTabBlock( target ){
+		$(target).css('display','block').addClass('active');
+	}
+
+	function showActiveImg( target ){
+		$(target).fadeIn(200);
+	}
+	
 	
 
 	$('body').on('click','.elem-1__menu a', function(e){
@@ -87,7 +239,7 @@ $(document).ready(function(){
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  // arrows: false,
-	  autoplay: true,
+	 
 	  autoplaySpeed: 1500,
 	  speed: 1300,
 	  prevArrow: '.new__slider-prev',
@@ -171,10 +323,8 @@ $(document).ready(function(){
 		$('body').toggleClass('ov-hidd');
 	});	
 	
-});
-
-
-		//MPDAL
+	
+			//MPDAL
 	$('body').on('click','.to-mod', function(e){
 		e.preventDefault();
 		var obj = {
@@ -185,10 +335,14 @@ $(document).ready(function(){
 				this.$targg = $(this.targg);
 				this.$targg.find('.cusst__title').html( this.titl );	
 				this.$targg.find('.form-subm').html( this.titl );	
+				
+				console.log( this.targg.length );
 
-				$('body').addClass('ov-hidd');
-
-				this.$targg.css('display','block');
+				if( this.targg.length ){
+					$('body').addClass('ov-hidd');
+					this.$targg.css('display','block');	
+				}
+					
 			}
 		}
 		obj.init();
@@ -206,10 +360,6 @@ $(document).ready(function(){
 		obj.init();
 	});
 
-
-
-$(window).on('load',function(){
-	$('body').addClass('loaded');
 	
 	var aktiffButt = $('.tab-butt.akktiff').attr('data-target');
 	showTabBlock( aktiffButt );
@@ -217,10 +367,36 @@ $(window).on('load',function(){
 	var acctiiffImg = $('.elem-1__menu .acctiiff').attr('href');
 	showActiveImg( acctiiffImg );	
 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
-
-
-
-
-
-
