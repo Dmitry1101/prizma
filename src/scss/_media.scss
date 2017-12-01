@@ -236,6 +236,20 @@
 }
 
 @media (max-width: 768px){
+	.deskkktop{
+		display: block;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+	}
+
+	.mobbbile{
+		overflow-y: auto;
+    height: auto;
+    opacity: 1;
+		display: block;
+	}
+
 	.letters{
 		margin:	0;
 		&__foot{
@@ -390,6 +404,10 @@
 }
 
 @media (max-width: 480px){
+	.head__menu li{
+		display: block;
+		margin-right: 10px;
+	}
 	.head__blck-3 a{
 		margin-left: 0;
 		&.to-mod{

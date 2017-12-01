@@ -20,8 +20,8 @@ body{
 	font-size: 16px;
 	line-height: 1.5;
 	background-color: $c-wh;
-	// opacity: 0;
-	// transition: opacity .3s linear;
+	opacity: 0;
+	transition: opacity .3s linear;
 	color: $c-bck;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -29,9 +29,9 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-	// &.loaded{
-	// 	opacity: 1;
-	// }
+	&.loaded{
+		opacity: 1;
+	}
 }  
 
 .top{
@@ -1003,7 +1003,7 @@ body{
 			}
 		}
 		.icon{
-			margin-left: 5px;
+			margin-left: 10px;
 		}
 	}
 }
@@ -1605,6 +1605,21 @@ body{
 
 
 
+.deskkktop{
+	display: block;
+  height: auto;
+  overflow-y: auto;
+  opacity: 1;
+}
+
+.mobbbile{
+	display: block;
+  overflow: hidden;	
+  height: 0;  
+	display: block;
+  opacity: 0;
+}
+
 
 a.acctiiff{
 	color: 	red;
@@ -1617,6 +1632,44 @@ a.acctiiff{
    100% {
 		opacity: 1;
    }
+}
+
+.kd89__sliddr{
+	&--wrapp{
+		position: relative;
+		img{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}	
+	&--prev{
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		bottom: 0px;
+		right: 50px;
+		z-index: 99;
+		background-color: rgba($c-blu3, 0.6);
+		cursor: pointer;
+		transition: all .3s linear;
+		&:hover{
+			background-color: rgba($c-blu3, 1);
+		}
+	}
+	&--next{
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		bottom: 0px;
+		right: 20px;
+		z-index: 99;
+		background-color: rgba($c-blu3, 0.6);
+		cursor: pointer;
+		transition: all .3s linear;
+		&:hover{
+			background-color: rgba($c-blu3, 1);
+		}
+	}
 }
 
 @import "media";
