@@ -390,5 +390,10 @@
 }
 
 @media (max-width: 480px){
-	
+	.head__blck-3 a{
+		margin-left: 0;
+		&.to-mod{
+			display: block;
+		}
+	}
 }
